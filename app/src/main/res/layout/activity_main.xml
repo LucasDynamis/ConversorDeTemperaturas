@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="254dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="CALCULADORA DE CONVERSÃO DE TEMPERATURAS"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/temp"
+        android:layout_width="147dp"
+        android:layout_height="33dp"
+        android:gravity="center"
+        android:text="Temperatura:"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.236"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.213" />
+
+
+    <EditText
+        android:id="@+id/enttemp"
+        android:layout_width="162dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/temp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.176" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="378dp"
+        android:layout_height="160dp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vlfor"
+        app:layout_constraintVertical_bias="0.063"
+        tools:ignore="MissingConstraints">
+
+
+        <RadioButton
+            android:id="@+id/btcelsius"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Celsius."
+            android:textColor="@color/black" />
+
+        <RadioButton
+            android:id="@+id/btfahrenheit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fahrenheit."
+            android:textColor="@color/black" />
+
+        <RadioButton
+            android:id="@+id/btkelvin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kelvin."
+            android:textColor="@color/black" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/vlfor"
+        android:layout_width="237dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="O valor foi fornecido em:"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/temp"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/convpara"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A temperatura deve ser convertida para:"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.596" />
+
+    <Spinner
+        android:id="@+id/spinnerout"
+        android:layout_width="380dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/convpara" />
+
+    <Button
+        android:id="@+id/btcalcular"
+        android:layout_width="325dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="16dp"
+        android:text="Converter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerout" />
+
+    <TextView
+        android:id="@+id/resultado"
+        android:layout_width="360dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btcalcular" />
+
+    <TextView
+        android:id="@+id/infoAdicional"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultado" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
